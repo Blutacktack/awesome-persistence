@@ -54,7 +54,7 @@ Following steps  are  rudimentary way of setting up a validator, For production 
 	```shell
 	persistenceCore init {{NODE_NAME}} --chain-id core-1
 	```
-* Replace the contents of your `${HOME}/.persistenceCore/con, exchangesfig/genesis.json` with that of core-1/final_genesis.json from the `master` branch of [repository](https://github.com/persistenceOne/genesisTransactions).
+* Replace the contents of your `${HOME}/.persistenceCore/config/genesis.json` with that of core-1/final_genesis.json from the `master` branch of [repository](https://github.com/persistenceOne/genesisTransactions).
 * Verify checksum `jq -S -c -M "" genesis.json | sha256sum` matches `f90fb025e9b5b55c88730ab5ab762b121daa7808cde27d50f465e1fe3b3e5cad`
 * Inside file `${HOME}/.persistenceCore/config/config.toml`, 
   * set `seeds` to `"08ab4552a74dd7e211fc79432918d35818a67189@52.69.58.231:26656,449a0f1b7dafc142cf23a1f6166bbbf035edfb10@13.232.85.66:26656,5b27a6d4cf33909c0e5b217789e7455e261941d1@15.222.29.207:26656"`.
